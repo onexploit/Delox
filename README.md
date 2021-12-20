@@ -7,6 +7,6 @@ You can click the Preview link to take a look at your changes.
  ِیکی از بهترین ابزار های پاک کردن هارو هست , میاد کل درایو هارو پاک میکنه و  هر دو هفته یکبار آپدیت میشهDelox باسلام خدمت دوستان عزیز , ابزار
  
  میتونید مارو در اینستاگرام دنبال کنید
- @one_exploit
+ اینستاگرام: @one_exploit
  ایمیل ما: vortexamirhosin@gmail.com
 
