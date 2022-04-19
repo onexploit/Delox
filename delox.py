@@ -1,4 +1,3 @@
-from msilib.schema import Error
 from requests import get
 import socket
 from lib2to3.pgen2 import driver
