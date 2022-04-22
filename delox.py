@@ -175,6 +175,8 @@ elif sys == 4:
             [2] -> Linux        Write code Linux bit in new file for run.
             [3] -> Mac OS       Write code MacOS in new file for run.
             [help] -> help
+
+            [99] -> back
                 ''')
             numbers = input('Enter Number: ')
 
@@ -272,6 +274,8 @@ elif sys == 4:
                     Menu_Writer()
                 elif input1 == 'back' or input1 == 'Back':
                     run()
+            elif numbers == '99':
+                run()
             Help()
     Menu_Writer()
 elif sys == 99:
