@@ -4,7 +4,7 @@ onexploit/Delox is a ✨ special ✨ repository because its `README.md` (this fi
 You can click the Preview link to take a look at your changes.
 --->
 
- ِیکی از بهترین ابزار های پاک کردن هارو هست , میاد کل درایو هارو پاک میکنه, این ابزار آپدیت میشهDelox باسلام خدمت دوستان عزیز , ابزار
+ ِیکی از بهترین ابزار های پاک کردن هارد هست , میاد کل درایو هارو پاک میکنه, این ابزار آپدیت میشهDelox باسلام خدمت دوستان عزیز , ابزار
  
  میتونید مارو در اینستاگرام دنبال کنید
  اینستاگرام: @one_exploit
