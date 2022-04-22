@@ -274,8 +274,10 @@ elif sys == 4:
                     Menu_Writer()
                 elif input1 == 'back' or input1 == 'Back':
                     run()
+                    break
             elif numbers == '99':
                 run()
+                break
             Help()
     Menu_Writer()
 elif sys == 99:
